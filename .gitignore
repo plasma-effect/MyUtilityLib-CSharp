@@ -1,0 +1,12 @@
+﻿################################################################################
+# この .gitignore ファイルは Microsoft(R) Visual Studio によって自動的に作成されました。
+################################################################################
+
+/.vs/MyUtilityLib-CSharp/v16
+/.vs
+/UtilityLibrary/.vs/UtilityLibrary
+/UtilityLibrary/packages
+/UtilityLibrary/UnitTest/bin/Debug
+/UtilityLibrary/UnitTest/obj/Debug
+/UtilityLibrary/UtilityLibrary/bin/Debug/netstandard2.0
+/UtilityLibrary/UtilityLibrary/obj
