@@ -34,5 +34,17 @@ namespace UtilityLibrary
             return true;
         }
 
+        public static void Swap<T>(ref T a, ref T b)
+        {
+            var c = a;
+            a = b;
+            b = c;
+        }
+
+        public static void Sort<T>(this ShiftedArray1<T> array)
+            where T : IComparable<T>
+        {
+            Array.Sort(array.ar);
+        }
     }
 }

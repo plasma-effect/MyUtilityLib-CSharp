@@ -14,7 +14,17 @@ namespace UnitTest
         [TestMethod]
         public void AllTest()
         {
-            // TODO: write test
+            var view = new StringView("12345");
+            var sub0 = view.Substring(1, 3);
+            var sub1 = view.Substring(2, 3);
+            Assert.IsTrue(sub0.Contains(sub0));
+            Assert.IsFalse(sub0.Contains(sub1));
+            Assert.IsTrue(sub0.Contains("23"));
+            Assert.IsFalse(sub0.Contains("45"));
+            Assert.IsTrue(sub0.Equals(view.Substring(1, 3)));
+            Assert.IsFalse(sub0.Equals(sub1));
+            Assert.IsTrue(sub0.Equals("234"));
+            Assert.IsFalse(sub0.Equals("345"));
         }
     }
 }

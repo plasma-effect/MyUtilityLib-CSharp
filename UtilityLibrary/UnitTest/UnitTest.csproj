@@ -50,6 +50,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AlgorithmTest.cs" />
+    <Compile Include="ArrayTest.cs" />
     <Compile Include="RangeTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="StringViewTest.cs" />
