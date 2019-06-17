@@ -3,15 +3,16 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Version>0.0.4</Version>
+    <Version>0.0.5</Version>
     <Authors>plasma-effect</Authors>
     <Company />
-    <Description>Utility Library</Description>
+    <Description>Utility Library For Me</Description>
     <Copyright>plasma-effect 2019</Copyright>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
     <PackageProjectUrl>https://github.com/plasma-effect/MyUtilityLib-CSharp</PackageProjectUrl>
     <RepositoryUrl>https://github.com/plasma-effect/MyUtilityLib-CSharp</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
+    <PackageReleaseNotes>Add RandomizerSet</PackageReleaseNotes>
   </PropertyGroup>
 
   <ItemGroup>

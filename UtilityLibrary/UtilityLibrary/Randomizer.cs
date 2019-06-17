@@ -1,4 +1,6 @@
-﻿using System;
+﻿//Copyright (c) 2019 plasma_effect
+//This source code is under MIT License. See ./LICENSE
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
