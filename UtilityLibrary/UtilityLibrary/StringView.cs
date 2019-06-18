@@ -107,7 +107,7 @@ namespace UtilityLibrary
             {
                 return false;
             }
-            foreach (var i in Range(0, this.Length))
+            foreach (var i in Range(this.Length))
             {
                 if (At(i) != other.At(i))
                 {
@@ -122,7 +122,7 @@ namespace UtilityLibrary
             {
                 return false;
             }
-            foreach (var i in Range(0, this.Length))
+            foreach (var i in Range(this.Length))
             {
                 if (At(i) != other[i])
                 {
@@ -158,9 +158,9 @@ namespace UtilityLibrary
 
         public IEnumerator<char> GetEnumerator()
         {
-            foreach (var i in Range(this.start, this.Length))
+            foreach (var i in Range(this.Length))
             {
-                yield return this.str[i];
+                yield return At(i);
             }
         }
 
