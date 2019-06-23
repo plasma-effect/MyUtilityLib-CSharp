@@ -27,7 +27,19 @@ namespace UnitTest
                 Assert.AreEqual(val.GetException().Message, "Test");
             }
             {
-                Expected<int> val = default;
+                Expected<int, Exception> val = default;
+                Assert.IsFalse(val.TryGet(out _));
+                Assert.IsFalse(val);
+                Assert.IsTrue(val.GetException() is null);
+            }
+            {
+                var val = Expected<NullReferenceException>.Success(42);
+                Assert.IsTrue(val.TryGet(out var value));
+                Assert.IsTrue(val);
+                Assert.AreEqual(value, 42);
+            }
+            {
+                var val = Expected<NullReferenceException>.Failure<int>(new NullReferenceException());
                 Assert.IsFalse(val.TryGet(out _));
                 Assert.IsFalse(val);
                 Assert.IsTrue(val.GetException() is NullReferenceException);

@@ -7,13 +7,14 @@ using System.Text;
 namespace UtilityLibrary
 {
     [Serializable]
-    public struct Expected<T>
+    public struct Expected<T, E>
+        where E:Exception
     {
         T value;
-        Exception exception;
+        E exception;
         bool flag;
-        
-        public static implicit operator bool(in Expected<T> exp)
+
+        public static implicit operator bool(in Expected<T, E> exp)
         {
             return exp.flag;
         }
@@ -32,7 +33,7 @@ namespace UtilityLibrary
             }
         }
 
-        public Exception GetException()
+        public E GetException()
         {
             if (this.flag)
             {
@@ -40,15 +41,11 @@ namespace UtilityLibrary
             }
             else
             {
-                if (this.exception is null)
-                {
-                    this.exception = Expected.DefaultException;
-                }
                 return this.exception;
             }
         }
 
-        internal Expected(T value, Exception exception, bool flag)
+        internal Expected(T value, E exception, bool flag)
         {
             this.value = value;
             this.exception = exception;
@@ -56,20 +53,27 @@ namespace UtilityLibrary
         }
     }
 
+    public static class Expected<E>
+        where E : Exception
+    {
+        public static Expected<T, E> Success<T>(T value)
+        {
+            return new Expected<T, E>(value, null, true);
+        }
+        public static Expected<T, E> Failure<T>(E exception)
+        {
+            return new Expected<T, E>(default, exception, false);
+        }
+    }
     public static class Expected
     {
-        internal static NullReferenceException DefaultException { get; }
-        public static Expected<T> Success<T>(T value)
+        public static Expected<T, Exception> Success<T>(T value)
         {
-            return new Expected<T>(value, null, true);
+            return new Expected<T, Exception>(value, null, true);
         }
-        public static Expected<T> Failure<T>(Exception exception)
+        public static Expected<T, Exception> Failure<T>(Exception exception)
         {
-            return new Expected<T>(default, exception, false);
-        }
-        static Expected()
-        {
-            DefaultException = new NullReferenceException("This Expected value has no value.");
+            return new Expected<T, Exception>(default, exception, false);
         }
     }
 
