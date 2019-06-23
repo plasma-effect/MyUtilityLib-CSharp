@@ -6,7 +6,7 @@ using System.Text;
 
 namespace UtilityLibrary
 {
-    public static class RangeAlgorithm
+    public static class Algorithm
     {
         public static bool Equal<T>(IEnumerable<T> lhs, IEnumerable<T> rhs)
         {

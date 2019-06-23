@@ -16,11 +16,11 @@ namespace UnitTest
             var b = new int[] { 0, 1, 2 };
             var c = new int[] { 0, 1, 2, 3 };
             var d = new int[] { 0, 1, 3 };
-            Assert.IsTrue(RangeAlgorithm.Equal(a, b));
-            Assert.IsFalse(RangeAlgorithm.Equal(a, c));
-            Assert.IsFalse(RangeAlgorithm.Equal(a, d));
-            Assert.IsFalse(RangeAlgorithm.Equal(c, a));
-            Assert.IsFalse(RangeAlgorithm.Equal(c, d));
+            Assert.IsTrue(Algorithm.Equal(a, b));
+            Assert.IsFalse(Algorithm.Equal(a, c));
+            Assert.IsFalse(Algorithm.Equal(a, d));
+            Assert.IsFalse(Algorithm.Equal(c, a));
+            Assert.IsFalse(Algorithm.Equal(c, d));
         }
     }
 }

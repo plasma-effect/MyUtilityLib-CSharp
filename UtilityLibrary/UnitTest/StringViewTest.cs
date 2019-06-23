@@ -26,8 +26,8 @@ namespace UnitTest
             Assert.IsTrue(sub0.Equals("234"));
             Assert.IsFalse(sub0.Equals("345"));
 
-            Assert.IsTrue(RangeAlgorithm.Equal(sub0, "234"));
-            Assert.IsFalse(RangeAlgorithm.Equal(sub0, "2345"));
+            Assert.IsTrue(Algorithm.Equal(sub0, "234"));
+            Assert.IsFalse(Algorithm.Equal(sub0, "2345"));
         }
     }
 }

@@ -3,7 +3,7 @@ using System.Linq;
 using System.Collections.Generic;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using static UtilityLibrary.IntegerEnumerable;
-using static UtilityLibrary.RangeAlgorithm;
+using static UtilityLibrary.Algorithm;
 
 namespace UnitTest
 {

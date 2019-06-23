@@ -3,7 +3,7 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Version>0.0.5</Version>
+    <Version>0.0.7</Version>
     <Authors>plasma-effect</Authors>
     <Company />
     <Description>Utility Library For Me</Description>
@@ -12,7 +12,8 @@
     <PackageProjectUrl>https://github.com/plasma-effect/MyUtilityLib-CSharp</PackageProjectUrl>
     <RepositoryUrl>https://github.com/plasma-effect/MyUtilityLib-CSharp</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
-    <PackageReleaseNotes>Add RandomizerSet</PackageReleaseNotes>
+    <PackageReleaseNotes>Add Expected&lt;T&gt; and Rename RangeAlgorithm to Algorithm(Destructive Change)</PackageReleaseNotes>
+    <PackageId>UtilityLibrary</PackageId>
   </PropertyGroup>
 
   <ItemGroup>

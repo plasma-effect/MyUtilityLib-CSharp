@@ -21,13 +21,13 @@ namespace UnitTest
             ar[1] = 1;
             ar[2] = 3;
 
-            Assert.IsTrue(RangeAlgorithm.Equal(ar, new int[] { 0, 2, 4, 1, 3 }));
+            Assert.IsTrue(Algorithm.Equal(ar, new int[] { 0, 2, 4, 1, 3 }));
             Assert.AreEqual(ar.Length, 5);
             Assert.AreEqual(ar.LongLength, 5L);
             Assert.AreEqual(ar.Rank, 1);
 
             ar.Sort();
-            Assert.IsTrue(RangeAlgorithm.Equal(ar, new int[] { 0, 1, 2, 3, 4 }));
+            Assert.IsTrue(Algorithm.Equal(ar, new int[] { 0, 1, 2, 3, 4 }));
         }
 
         [TestMethod]
@@ -43,7 +43,7 @@ namespace UnitTest
                 }
             }
 
-            Assert.IsTrue(RangeAlgorithm.Equal(ar, new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9 }));
+            Assert.IsTrue(Algorithm.Equal(ar, new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9 }));
             Assert.AreEqual(ar.Dim0Length, 3);
             Assert.AreEqual(ar.Dim1Length, 3);
             Assert.AreEqual(ar.Size, 9);
